@@ -10,7 +10,7 @@ if (tpl_getConf('topbar') == 'never') {
 }
 ?>
 
-<?php if (class_exists('Ld_Ui') && method_exists('Ld_Ui', 'top_bar') && $top_bar) : ?>
+<?php if (class_exists('Ld_Ui') && method_exists('Ld_Ui', 'topBar') && $top_bar) : ?>
     <?php
     $loginUrl = Ld_Ui::getAdminUrl(array(
         'module' => 'default', 'controller' => 'auth', 'action' => 'login',
@@ -22,7 +22,7 @@ if (tpl_getConf('topbar') == 'never') {
         $logoutUrl = wl($ID,'do=logout&amp;sectok='.getSecurityToken());
     }
     ?>
-    <?php Ld_Ui::top_bar(array('loginUrl' => $loginUrl, 'logoutUrl' => $logoutUrl)); ?>
+    <?php Ld_Ui::topBar(array('loginUrl' => $loginUrl, 'logoutUrl' => $logoutUrl)); ?>
 <?php else : ?>
   <div class="user-info">
       <?php tpl_userinfo()?>

@@ -216,3 +216,9 @@ div.dokuwiki div.img_big {
 .dokuwiki .h6e-main-content ul.admin_tasks {
 	margin-left:0;
 }
+
+/* Tabs */
+
+.h6e-block {
+	padding:20px;
+}

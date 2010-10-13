@@ -28,7 +28,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   <link rel="stylesheet" media="screen" href="<?php echo H6E_CSS ?>/h6e-minimal/h6e-minimal.css" />
 
   <?php tpl_metaheaders() ?>
-  
+
   <style type="text/css">
   <?php if (tpl_getConf('width') != 'auto') : ?>
   .h6e-main-content {
@@ -55,20 +55,29 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
   <div class="<?php echo $page_type ?> h6e-main-content">
 
+    <?php /* if($conf['breadcrumbs']){?>
+    <div class="breadcrumbs">
+      <?php tpl_breadcrumbs() ?>
+    </div>
+    <?php } */?>
+
     <h1 class="h6e-page-title">
     <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?>
     </h1>
+
+    <?php /*
+    <ul class="h6e-tabs">
+      <li><?php tpl_actionlink('history') ?></li>
+      <li><?php tpl_actionlink('edit') ?></li>
+    </ul>
+    */ ?>
+
+    <div class="h6e-block">
 
     <?php if (!tpl_getConf('hide-entry-title')){?>
         <h2 class="h6e-entry-title">
         <?php tpl_pagetitle($ID) ?>
         </h2>
-    <?php }?>
-
-    <?php if($conf['breadcrumbs']){?>
-    <div class="breadcrumbs">
-      <?php tpl_breadcrumbs() ?>
-    </div>
     <?php }?>
 
     <?php if($conf['youarehere']){?>
@@ -81,6 +90,8 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
         <?php tpl_content()?>
     </div>
 
+    <?php if(empty($_REQUEST['do'])){?>
+
     <div class="pageinfo">
         <?php tpl_pageinfo()?>
     </div>
@@ -89,7 +100,10 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
         <?php tpl_button('edit')?>
         <?php tpl_button('history')?>
         <?php tpl_button('revert')?>
-        <?php tpl_button('backlink')?>
+    </div>
+
+    <?php }?>
+
     </div>
 
     <div class="h6e-simple-footer">

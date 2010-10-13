@@ -1,11 +1,16 @@
 <package release="unstable">
   <id>dokuwiki-theme-minimal</id>
   <name>Minimal</name>
-  <version>0.5-1</version>
+  <version>0.5-2</version>
   <type>theme</type>
   <need>css-h6e-minimal</need>
   <extend>dokuwiki</extend>
   <directory>lib/tpl/minimal</directory>
+  <colors>
+      <scheme>base</scheme>
+      <scheme>bars</scheme>
+      <scheme>panels</scheme>
+  </colors>
   <configuration>
       <preference type="text" name="width" label="Width" defaultValue="auto"/>
       <preference type="text" name="font-size" label="Font Size" defaultValue="1.1em"/>
