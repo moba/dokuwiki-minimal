@@ -121,8 +121,8 @@ button.toolbutton {
 	text-decoration:none;
 }
 
-#wikipage h1 { font-size:1.6em; margin-bottom:1em; margin-top:1em; }
-#wikipage h2 { font-size:1.6em; margin-bottom:1em; margin-top:1em;  }
+#wikipage h1 { font-size:1.6em; margin-bottom:1em; margin-top:0.5em; }
+#wikipage h2 { font-size:1.6em; margin-bottom:1em; }
 
 #wiki__text {
 	width:98%;

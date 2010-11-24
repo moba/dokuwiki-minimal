@@ -1,7 +1,7 @@
 <package release="unstable">
   <id>dokuwiki-theme-minimal</id>
   <name>Minimal</name>
-  <version>0.5-3</version>
+  <version>0.5-5</version>
   <type>theme</type>
   <need>css-h6e-minimal</need>
   <extend>dokuwiki</extend>
@@ -15,7 +15,7 @@
       <preference type="text" name="width" label="Width" defaultValue="auto"/>
       <preference type="text" name="font-size" label="Font Size" defaultValue="1.1em"/>
       <preference type="boolean" name="hide-entry-title" label="Hide entry title?" defaultValue="false"/>
-      <preference type="list" label="Display the top bar" name="topbar">
+      <preference type="list" label="Display Top Bar" name="topbar">
           <option value="everyone" label="For everyone"/>
           <option value="connected" label="For connected users"/>
           <option value="never" label="Never"/>

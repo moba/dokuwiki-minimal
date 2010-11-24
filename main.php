@@ -17,12 +17,11 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang']?>"
  lang="<?php echo $conf['lang']?>" dir="<?php echo $lang['direction']?>">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
   <title><?php tpl_pagetitle() ?> - <?php echo strip_tags($conf['title']) ?></title>
 
   <link rel="stylesheet" media="screen" href="<?php echo H6E_CSS ?>/h6e-minimal/h6e-minimal.css" />
@@ -40,7 +39,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   .h6e-post-content {
       font-size:<?php echo tpl_getConf('font-size') ?>;
   }
-  .h6e-entry-title, .h6e-entry-title a, .h6e-entry-title a:visited, .do-page h1, .content-page h2 {
+  .h6e-entry-title, .h6e-entry-title a, .h6e-entry-title a:visited, .content-page h2 {
       color:<?php echo tpl_getConf('title-color') ?>;
   }
   </style>
@@ -64,6 +63,8 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
     <h1 class="h6e-page-title">
     <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?>
     </h1>
+
+    <?php if (class_exists('Ld_Ui') && method_exists('Ld_Ui', 'topNav')) { Ld_Ui::topNav(); } ?>
 
     <?php /*
     <ul class="h6e-tabs">
