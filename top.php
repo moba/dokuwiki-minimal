@@ -1,9 +1,8 @@
 <?php html_msgarea() ?>
 
 <?php
-if (tpl_getConf('topbar') == 'never') {
-    $top_bar = false;
-} else if (tpl_getConf('topbar') == 'connected' && empty($_SERVER['REMOTE_USER'])) {
+global $conf;
+if ($conf['topbar'] == 'connected' && empty($_SERVER['REMOTE_USER'])) {
     $top_bar = false;
 } else {
     $top_bar = true;
@@ -21,8 +20,8 @@ if (tpl_getConf('topbar') == 'never') {
     if (empty($logoutUrl)) {
         $logoutUrl = wl($ID,'do=logout&amp;sectok='.getSecurityToken());
     }
-    ?>
-    <?php Ld_Ui::topBar(array('loginUrl' => $loginUrl, 'logoutUrl' => $logoutUrl)); ?>
+    Ld_Ui::topBar(array('loginUrl' => $loginUrl, 'logoutUrl' => $logoutUrl));
+	?>
 <?php else : ?>
   <div class="user-info">
       <?php tpl_userinfo()?>
