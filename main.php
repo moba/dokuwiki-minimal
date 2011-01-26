@@ -70,7 +70,11 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
     </ul>
     */ ?>
 
-    <div class="h6e-block">
+    <?php if (tpl_getConf('content-block')){?>
+        <div class="h6e-block">
+    <?php } else { ?>
+        <div>
+    <?php } ?>
 
     <?php if (!tpl_getConf('hide-entry-title')){?>
         <h2 class="h6e-entry-title">
