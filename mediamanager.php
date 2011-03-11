@@ -35,13 +35,13 @@ if (!defined('H6E_CSS')) {
 </head>
 
 <body class="h6e-layout">
-<div id="media__manager" class="dokuwiki h6e-main-content">
+<div id="media__manager" class="dokuwiki">
 
     <div id="media__left">
 
         <?php html_msgarea()?>
 
-        <h2 class="h6e-entry-title"><?php echo hsc($lang['mediaselect'])?></h2>
+        <h1><?php echo hsc($lang['mediaselect'])?></h1>
 
         <?php /* keep the id! additional elements are inserted via JS here */?>
         <div id="media__opts"></div>
