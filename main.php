@@ -2,12 +2,6 @@
 
 if (!defined('DOKU_INC')) die();
 
-if (!defined('H6E_CSS')) {
-  if (file_exists(dirname(__FILE__) . '/h6e-minimal')) {
-    define('H6E_CSS', DOKU_URL . 'lib/tpl/minimal');
-  }
-}
-
 if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show', 'edit'))) {
     $page_type = 'content-page';
 } else {
@@ -21,8 +15,6 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 <head>
   <meta charset="utf-8" />
   <title><?php tpl_pagetitle() ?> - <?php echo strip_tags($conf['title']) ?></title>
-
-  <link rel="stylesheet" media="screen" href="<?php echo H6E_CSS ?>/h6e-minimal/h6e-minimal.css" />
 
   <?php tpl_metaheaders() ?>
 
@@ -54,10 +46,6 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
       <?php tpl_breadcrumbs() ?>
     </div>
     <?php } */?>
-
-    <h1 class="h6e-page-title">
-    <?php tpl_link(wl(),$conf['title'],'name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]"') ?>
-    </h1>
 
     <?php if (class_exists('Ld_Ui') && method_exists('Ld_Ui', 'topNav')) { Ld_Ui::topNav(); } ?>
 
@@ -118,11 +106,10 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
           </div>
       </div>
 
-      <p><?php echo tpl_getConf('footer-text') ?></p>
-
     </div>
 
   </div>
+  <div class="footer-text"><?php echo tpl_getConf('footer-text') ?></div>
 
 </div>
 
