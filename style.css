@@ -6,8 +6,7 @@ body {
  font-family: verdana,helvetica,arial,sans-serif;
  font-size:0.8em;
  text-align: center; /* weird I8 centering bug, only centers container if text-align is center here... */
- background-color: #EDECE9;
- /*background: url("./images/background.png") no-repeat fixed 0 0 #EDECE9;*/
+ background: url("/images/background.png") no-repeat fixed 0 0 #EDECE9;
 }
 
 .h6e-main-content {

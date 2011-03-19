@@ -15,7 +15,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 <head>
   <meta charset="utf-8" />
   <title><?php tpl_pagetitle() ?> - <?php echo strip_tags($conf['title']) ?></title>
-
+  <link rel="icon" href="images/favicon.ico" type="image/ico"/> 
   <?php tpl_metaheaders() ?>
 
   <style type="text/css">
