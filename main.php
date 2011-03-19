@@ -40,7 +40,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
 <div class="dokuwiki">
 
-  <?php if (!tpl_getConf('hide-login-block')) { include dirname(__FILE__) . '/top.php'; } ?> 
+  <?php if ((isset($_SERVER['REMOTE_USER'])) || (!tpl_getConf('hide-login-block'))) { include dirname(__FILE__) . '/top.php'; } ?> 
   
   <div class="<?php echo $page_type ?> h6e-main-content">
 
