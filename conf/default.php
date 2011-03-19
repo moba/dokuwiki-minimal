@@ -2,7 +2,10 @@
 
 $conf['width'] = 'auto';
 $conf['font-size'] = '1.1em';
+$conf['font-color'] = '#000000';
 $conf['title-color'] = '#009DFF';
+$conf['background-color'] = '#EDECE9';
+$conf['content-background-color'] = '#FFFFFF';
 $conf['hide-entry-title'] = true;
 $conf['hide-login-block'] = false;
 $conf['content-block'] = true;

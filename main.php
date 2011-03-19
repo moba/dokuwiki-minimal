@@ -29,6 +29,13 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   .h6e-post-content {
       font-size:<?php echo tpl_getConf('font-size') ?>;
   }
+  body {
+      background-color:<?php echo tpl_getConf('background-color') ?>;
+      color:<?php echo tpl_getConf('font-color') ?>;
+  }
+  .h6e-main-content {
+      background-color:<?php echo tpl_getConf('content-background-color') ?>;
+  } 
   .h6e-entry-title, .h6e-entry-title a, .h6e-entry-title a:visited, .do-page h1, .content-page h2 {
       color:<?php echo tpl_getConf('title-color') ?>;
   }
