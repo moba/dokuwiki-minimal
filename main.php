@@ -15,7 +15,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 <head>
   <meta charset="utf-8" />
   <title><?php tpl_pagetitle() ?> - <?php echo strip_tags($conf['title']) ?></title>
-  <link rel="icon" href="images/favicon.ico" type="image/ico"/> 
+  <link rel="icon" href="/images/favicon.ico" type="image/ico"/> 
   <?php tpl_metaheaders() ?>
 
   <style type="text/css">
@@ -29,6 +29,9 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
   .h6e-post-content {
       font-size:<?php echo tpl_getConf('font-size') ?>;
   }
+  .h6e-entry-title, .h6e-entry-title a, .h6e-entry-title a:visited, .do-page h1, .content-page h2 {
+      color:<?php echo tpl_getConf('title-color') ?>;
+  }
   </style>
 
 </head>
@@ -37,8 +40,8 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
 
 <div class="dokuwiki">
 
-  <?php include dirname(__FILE__) . '/top.php' ?>
-
+  <?php if (!tpl_getConf('hide-login-block')) { include dirname(__FILE__) . '/top.php'; } ?> 
+  
   <div class="<?php echo $page_type ?> h6e-main-content">
 
     <?php /* if($conf['breadcrumbs']){?>
