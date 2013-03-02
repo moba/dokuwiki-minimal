@@ -1,6 +1,7 @@
 <?php
 
 $meta['width'] = array('string');
+$meta['border'] = array('string');
 $meta['font-size'] = array('string');
 $meta['font-color'] = array('string');
 $meta['title-color'] = array('string');

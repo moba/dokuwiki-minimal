@@ -1,6 +1,7 @@
 <?php
 
 $conf['width'] = 'auto';
+$conf['border'] = '1px solid #000000';
 $conf['font-size'] = '1.1em';
 $conf['font-color'] = '#000000';
 $conf['title-color'] = '#009DFF';
