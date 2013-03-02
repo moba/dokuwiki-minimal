@@ -30,7 +30,7 @@ if (empty($_REQUEST['do']) || in_array($_REQUEST['do'], array('revisions', 'show
       font-size:<?php echo tpl_getConf('font-size') ?>;
   }
   body {
-      background-color:<?php echo tpl_getConf('background-color') ?>;
+      background:<?php echo tpl_getConf('background') ?>;
       color:<?php echo tpl_getConf('font-color') ?>;
   }
   .h6e-main-content {
