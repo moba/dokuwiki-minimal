@@ -359,6 +359,9 @@ div.dokuwiki #dw__toc {
   width: 200px;
   font-size: 80%;
   clear: both;
+  background-color: __background_alt__;
+  border: 1px solid __border__;
+  padding: 0.25em 0 0.7em 1em;
 }
 
 div.dokuwiki div.tocheader {
@@ -403,7 +406,6 @@ div.dokuwiki #toc__inside {
 div.dokuwiki ul.toc {
   list-style-type: none;
   list-style-image: none;
-  line-height: 1.2em;
   padding-left: 1em;
 }
 
