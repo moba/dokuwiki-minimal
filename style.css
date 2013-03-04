@@ -168,11 +168,6 @@ button.toolbutton {
   cursor: pointer;
 }
 
-/* nice alphatransparency background except for IE <7 */
-html>body button.toolbutton {
-  background:  __background__ url(images/buttonshadow.png) repeat-x bottom;
-}
-
 #wikipage h1 a,
 #wikipage h2 a,
 #wikipage h3 a,
@@ -411,7 +406,6 @@ div.dokuwiki ul.toc {
 }
 
 div.dokuwiki ul.toc li {
-  background: transparent url(images/tocdot2.gif) 0 0.6em no-repeat;
   padding-left: 0.4em;
 }
 
