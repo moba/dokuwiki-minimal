@@ -11,7 +11,6 @@ body {
 .h6e-main-content {
  text-align: justify;
  max-width: 1024px;
- width: expression((document.body.clientWidth > 1024)? "1024px" : "auto");*/ ) + "px");
  margin: 0 auto;
  background-color: #ffffff;
  filter:alpha(opacity=90);
